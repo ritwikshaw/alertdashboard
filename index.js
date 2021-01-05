@@ -45,6 +45,10 @@ app.delete('/delete/:id', async (req, res) => {
 })
 
 
-app.listen(3001, ()=> {
-    console.log('Server in live')
-})
+var port = 5000;
+app.listen(port, ()=>{
+	console.log("you make it till here");
+});
+app.listen(process.env.PORT, process.env.IP, function(){
+   console.log("The playgrounds Server Has Started!");
+});
